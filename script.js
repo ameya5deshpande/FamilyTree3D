@@ -1,6 +1,3 @@
-import * as THREE from "three";
-import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-
 window.onload = function () {
 console.log("Three.js is loaded:", typeof THREE !== "undefined");
 
