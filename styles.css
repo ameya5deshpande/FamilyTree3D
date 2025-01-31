@@ -1,11 +1,42 @@
-/* Make the canvas fill the screen */
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    perspective: 800px;
 }
 
-#canvas-container {
-    width: 100vw;
-    height: 100vh;
+.tree-container {
+    transform: rotateX(30deg);
+}
+
+.tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.node {
+    width: 120px;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    margin: 10px;
+    transform-style: preserve-3d;
+}
+
+.branch {
+    width: 2px;
+    height: 40px;
+    background: black;
+    position: relative;
+}
+
+.children, .grandchildren {
+    display: flex;
+    gap: 30px;
 }
