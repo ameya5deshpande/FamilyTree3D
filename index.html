@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Family Tree</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="canvas-container"></div>
-
-<!-- Load Three.js and OrbitControls from CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.172.0/three.module.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.172.0/examples/js/controls/OrbitControls.js"></script>
-
-<!-- Load your custom script -->
-<script type="module" src="script.js"></script>
-
+    <div class="tree-container">
+        <div class="tree">
+            <div class="node parent">Grandparent</div>
+            <div class="branch"></div>
+            <div class="children">
+                <div class="node">Parent 1</div>
+                <div class="node">Parent 2</div>
+            </div>
+            <div class="branch"></div>
+            <div class="grandchildren">
+                <div class="node">You</div>
+                <div class="node">Sibling</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
-
-
