@@ -19,8 +19,8 @@ function renderTree(familyData) {
         const person = familyData[id];
 
         let x = xOffset;
-        let y = person.parents && person.parents.length ? -100 * (person.parents.length + 1) : 0;
-        let z = person.siblings ? 50 : 0; // Move siblings slightly in Z-axis
+        let y = (person.parents && Array.isArray(person.parents)) ? -100 * (person.parents.length + 1) : 0;
+        let z = (person.siblings && Array.isArray(person.siblings)) ? 50 : 0; // Move siblings slightly in Z-axis
 
         createNode(id, person.name, x, y, z);
         xOffset += 150; // Adjust spacing dynamically
@@ -28,5 +28,6 @@ function renderTree(familyData) {
 }
 
 loadFamilyData();
+
 
 
