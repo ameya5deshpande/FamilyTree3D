@@ -4,31 +4,29 @@ async function loadFamilyData() {
     renderTree(familyData);
 }
 
+function createNode(id, name, x, y, z = 0) {
+    const node = document.createElement('div');
+    node.classList.add('node');
+    node.textContent = name;
+    node.style.transform = `translate3d(${x}px, ${y}px, ${z}px)`;
+    document.querySelector('.tree-container').appendChild(node);
+}
+
 function renderTree(familyData) {
-    const container = document.querySelector(".tree-container");
+    let xOffset = 0; // Track x position for spacing
 
-    Object.keys(familyData).forEach(person => {
-        const node = document.createElement("div");
-        node.classList.add("node");
-        node.textContent = familyData[person].name;
-        container.appendChild(node);
+    Object.keys(familyData).forEach((id) => {
+        const person = familyData[id];
 
-        // Positioning (Basic Example)
-        if (familyData[person].parents.length > 0) {
-            node.style.top = "50px";  // Parents move up
-        }
-        if (familyData[person].siblings.length > 0) {
-            node.style.left = "100px"; // Siblings move sideways
-        }
-        if (familyData[person].spouse) {
-            node.style.right = "100px"; // Spouse moves slightly closer
-        }
-        if (familyData[person].children.length > 0) {
-            node.style.bottom = "100px"; // Children move below
-        }
+        let x = xOffset;
+        let y = person.parents ? -100 * (person.parents.length + 1) : 0;
+        let z = person.siblings ? 50 : 0; // Move siblings slightly in Z-axis
+
+        createNode(id, person.name, x, y, z);
+        xOffset += 150; // Adjust spacing dynamically
     });
 }
 
-window.onload = loadFamilyData;
+loadFamilyData();
 
 
