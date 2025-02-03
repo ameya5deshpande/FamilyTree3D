@@ -1,30 +1,40 @@
 {
-  "me": {
-    "name": "You",
-    "parents": ["Father", "Mother"],
-    "siblings": ["Brother"],
-    "spouse": "Wife",
-    "children": ["Son", "Daughter"]
+  "1": {
+    "name": "Ameya",
+    "parents": [2, 3],
+    "siblings": [4],
+    "spouse": 5,
+    "children": [6, 7]
   },
-  "Father": {
-    "name": "Father",
-    "parents": ["Paternal Grandfather", "Paternal Grandmother"],
-    "siblings": [],
-    "spouse": "Mother",
-    "children": ["You", "Brother"]
+  "2": {
+    "name": "Anupama",
+    "parents": [8, 9],
+    "siblings": [10, 11],
+    "spouse": 3,
+    "children": [1, 4]
   },
-  "Mother": {
-    "name": "Mother",
-    "parents": ["Maternal Grandfather", "Maternal Grandmother"],
-    "siblings": [],
-    "spouse": "Father",
-    "children": ["You", "Brother"]
+  "3": {
+    "name": "Ramchandra",
+    "spouse": 2,
+    "children": [1, 4]
   },
-  "Brother": {
-    "name": "Brother",
-    "parents": ["Father", "Mother"],
-    "siblings": ["You"],
-    "spouse": null,
-    "children": []
+  "4": {
+    "name": "Suchit",
+    "parents": [2, 3],
+    "siblings": [1]
+  },
+  "5": {
+    "name": "Sanchiti",
+    "spouse": 1,
+    "children": [6, 7]
+  },
+  "6": {
+    "name": "Aadya",
+    "parents": [1, 5]
+  },
+  "7": {
+    "name": "Child 2",
+    "parents": [1, 5]
   }
 }
+
