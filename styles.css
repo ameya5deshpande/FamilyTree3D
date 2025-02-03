@@ -42,12 +42,12 @@ body {
 }
 
 /* Parents go above */
-.parent {
+.parents {
     top: -100px;
 }
 
 /* Siblings go sideways */
-.sibling {
+.siblings {
     left: 120px;
 }
 
@@ -57,6 +57,6 @@ body {
 }
 
 /* Children below */
-.child {
+.children {
     top: 100px;
 }
