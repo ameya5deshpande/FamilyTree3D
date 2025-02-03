@@ -1,0 +1,30 @@
+{
+  "me": {
+    "name": "You",
+    "parents": ["Father", "Mother"],
+    "siblings": ["Brother"],
+    "spouse": "Wife",
+    "children": ["Son", "Daughter"]
+  },
+  "Father": {
+    "name": "Father",
+    "parents": ["Paternal Grandfather", "Paternal Grandmother"],
+    "siblings": [],
+    "spouse": "Mother",
+    "children": ["You", "Brother"]
+  },
+  "Mother": {
+    "name": "Mother",
+    "parents": ["Maternal Grandfather", "Maternal Grandmother"],
+    "siblings": [],
+    "spouse": "Father",
+    "children": ["You", "Brother"]
+  },
+  "Brother": {
+    "name": "Brother",
+    "parents": ["Father", "Mother"],
+    "siblings": ["You"],
+    "spouse": null,
+    "children": []
+  }
+}
